@@ -9,8 +9,9 @@ app.use(express.static(__dirname + '/src'));
 
                                                                                                 
 var nunjucks = require('nunjucks');
-nunjucks.configure('views', {
+nunjucks.configure(__dirname + '/src', {
     autoescape: true,
+    cache: false,
     express: app
 });
 
