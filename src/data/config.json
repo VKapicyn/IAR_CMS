@@ -1,0 +1,21 @@
+{
+  "pages":[
+    {
+      "title_ru":"Главная",
+      "title_en":"Main",
+      "alias":"main",
+      "order":"0",
+      "stakeholders":["local authorities", "scientific society", "investors"],
+      "indexes":[]
+    },
+    {
+      "title_ru":"1.1 Стратегия",
+      "title_en":"1.1 Strategy",
+      "alias":"strategy",
+      "order":"1",
+      "stakeholders":["local authorities", "investors", "partners"],
+      "indexes":["G4-1", "G4-2", "G4-9"]
+    }
+
+  ]
+}
