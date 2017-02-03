@@ -3,10 +3,12 @@ var express = require('express'),
 var getPage = require('./controllers/getPage');
 var getPDF = require('./controllers/getPDF').pdf;
 
+
 //здесь будет распределение по языку
-router.use('/page/:id', function(req, res, next) {
+router.use('/page/:alias', function(req, res, next) {
     //данное условие будет заменено на проверку соотвествующих cookie
-    if (req.method='GET' && (req.params.id!='ru'))
+    //console.log(req.cookies['lang'])
+    if ((req.cookies['lang'] == 'RU') || (req.cookies['lang'] == undefined))
         getPage.ru(req, res);
     else
         getPage.en(req, res);
