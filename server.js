@@ -1,9 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var cookieParser = require('cookie-parser');
 
 app.use(bodyParser());
 app.use(bodyParser.json());
+app.use(cookieParser())
 app.use(express.static(__dirname + '/src'));
 
 
