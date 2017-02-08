@@ -1,21 +1,20 @@
 var fs = require('fs');
 
-exports.ru = function(req, res) {
-	try {
-		res.render(req.params.alias + '_ru' + '.html', {
-			title: getTitle(req.params.alias, 'ru')
-		});
-	} catch (err) {
-		res.redirect('/page/404');
-	}
-}
 
-exports.en = function(req, res) {
+exports.page = function(req, res){
 	try {
-		res.render(req.params.alias + '_en' + '.html', {
-			title: getTitle(req.params.alias, 'en')
-		});
-	} catch (err) {
+		if ((req.cookies['lang'] == 'ru') || (req.cookies['lang'] == undefined)) {
+			res.render(req.params.alias + '_ru' + '.html', {
+				title: getTitle(req.params.alias, 'ru')
+			});
+		}
+		else{
+			res.render(req.params.alias + '_en' + '.html', {
+				title: getTitle(req.params.alias, 'en')
+			});
+		}
+	}
+	catch (err) {
 		res.redirect('/page/404');
 	}
 }
