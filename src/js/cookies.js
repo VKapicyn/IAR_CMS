@@ -13,6 +13,7 @@ window.onload = function() {
 	updateBookmarks(alias);
 }
 
+
 function setLangRu() {
 	setCookie('lang', 'ru', options);
 	location.reload();
@@ -25,7 +26,7 @@ function setLangEn() {
 
 function setHistory(alias) {
 	if (getCookie('history') == undefined) {
-		setCookie('history', '{"history":[]}');
+		setCookie('history', '{"history":[]}', "{'expires':60000}");
 	}
 	var temp = getCookie('history');
 	temp = JSON.parse(temp);
@@ -36,11 +37,6 @@ function setHistory(alias) {
 	setCookie('history', JSON.stringify({
 		"history": temp
 	}));
-}
-
-//здесь должно быть что-то, что при закрытии страницы убивает историю
-function resetHistory() {
-
 }
 
 function setBookmark(alias) {
@@ -90,6 +86,7 @@ function setCookie(name, value, options) {
 	}
 	if (expires && expires.toUTCString) {
 		options.expires = expires.toUTCString();
+		console.log(options.expires);
 	}
 
 	value = encodeURIComponent(value);

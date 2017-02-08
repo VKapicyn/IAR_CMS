@@ -17,6 +17,14 @@
       "indexes":["G4-1", "G4-2", "G4-9"]
     },
     {
+      "title_ru":"1.2.Бизнес-модель",
+      "title_en":"1.2 Business model",
+      "alias":"business-model",
+      "order":"2",
+      "stakeholders":["local authorities", "investors", "partners"],
+      "indexes":["G4-4"]
+    }
+    {
       "title_ru":"Ошибка 404",
       "title_en":"Error 404",
       "alias":"404",
