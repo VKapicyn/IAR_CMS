@@ -1,33 +1,39 @@
 var fs = require('fs');
+//var stringSearcher = require('string-search');
 
-exports.page = function(req, res){
-    let alias = [];
-    let titles = [];
+exports.postSearch = function(req, res){
+    let lang = ((req.cookies['lang'] == 'ru') || (req.cookies['lang'] == undefined)) ? 'ru' : 'en';
+    let data = getData(req);
+    let result = [];
+    
 
-    /*if ((req.cookies['lang'] == 'ru') || (req.cookies['lang'] == undefined)) {
-        console.log(fs.readFileSync('src/' + req.params.alias + '_ru' + '.html', 'utf8')
-            .replace(/<\/?[^>]+>/g,'')
-        );
+    for(let i=0; i < data.length; i++){
+        if (data[i].text.toLowerCase().indexOf(req.body.words.toLowerCase())!=-1 || data[i].title.toLowerCase().indexOf(req.body.words.toLowerCase())!=-1)
+            result.push(data[i]);
     }
-    else {
-        console.log(fs.readFileSync('src/' + req.params.alias + '_en' + '.html', 'utf8')
-            .replace(/<\/?[^>]+>/g,'')
-        );
-    }*/
+
+    res.render('search_' + lang + '.html', {data: result});
 }
 
 exports.liveSearch = function(req, res){
+    res.send(getData(req));
+}
+
+function getData(req) {
     let result = [];
     let config = JSON.parse(fs.readFileSync('src/data/config.json', 'utf8'));
     let lang = ((req.cookies['lang'] == 'ru') || (req.cookies['lang'] == undefined)) ? 'ru' : 'en';
 
-    for(let i=0; i<config.pages.length; i++){
+    for(let i=0; i <= config.pages.length; i++){
         try{
             let object = {};
             let alias = config.pages[i]['alias'];
             object.text = fs.readFileSync('src/' + alias + '_' + lang + '.html', 'utf8')
-                .replace(/<\/?[^>]+>/g,'');
+                .replace(/<\/?[^>]+>/g,'')
+                .replace(/   /g, '')
+                .replace(/\n/g, '');  
             object.title = lang == 'ru' ? config.pages[i]['title_ru'] : config.pages[i]['title_en'];
+            object.alias = config.pages[i]['alias'];
             result.push(object);
         }
         catch(err){
@@ -35,9 +41,5 @@ exports.liveSearch = function(req, res){
         }
     }
 
-    res.send(result);
-}
-
-exports.stadnartSearch = function(req, res){
-
+    return result;
 }

@@ -32,7 +32,7 @@ function getPagesConfig() {
 }
 
 function getPageIndexByAlias(search_alias, list = Array()) {
-	for (var i = 0; i < list.pages.length; i++) {
+	for (var i = 0; i <= list.pages.length; i++) {
 		if (list.pages[i].alias == search_alias) {
 			return i;
 		}

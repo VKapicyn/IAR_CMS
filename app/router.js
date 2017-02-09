@@ -17,6 +17,7 @@ router.get('/pdf/:page', function(req, res) {
 
 router.get('/page/:alias', getPage.page);
 router.get('/search', fsSearch.liveSearch);
+router.post('/search/str', fsSearch.postSearch);
 
 router.get('/', function(req, res) {
 	res.redirect('/page/main');

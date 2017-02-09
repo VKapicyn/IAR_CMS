@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+        {{ title }}
+        </title>
+    </head>
+    <body>
+        Поиск тест
+        <form method="post" action="/search/str">
+            <input type="text" name="words" placeholder="Поиск">
+            <input type="submit" value="Submit">
+        </form>
+        </br>
+        {% for item in data %}
+        <li><a href="/page/{{ item.alias }}">{{ item.title }}</a></li>
+        {% else %}
+        <li>Ничего не найдено</li>
+        {% endfor %}
+    </body>
+</html>
