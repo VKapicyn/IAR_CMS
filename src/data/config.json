@@ -23,12 +23,20 @@
       "order":"2",
       "stakeholders":["local authorities", "investors", "partners"],
       "indexes":["G4-4"]
-    }
+    },
     {
       "title_ru":"Ошибка 404",
       "title_en":"Error 404",
       "alias":"404",
       "order":"-1",
+      "stakeholders":[],
+      "indexes":[]
+    },
+    {
+      "title_ru":"Поиск",
+      "title_en":"Searching",
+      "alias":"search",
+      "order":"-2",
       "stakeholders":[],
       "indexes":[]
     }
