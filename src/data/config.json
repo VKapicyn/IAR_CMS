@@ -31,6 +31,14 @@
       "order":"-1",
       "stakeholders":[],
       "indexes":[]
+    },
+    {
+      "title_ru":"Поиск",
+      "title_en":"Searching",
+      "alias":"search",
+      "order":"-2",
+      "stakeholders":[],
+      "indexes":[]
     }
   ]
 }
