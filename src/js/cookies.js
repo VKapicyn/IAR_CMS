@@ -11,8 +11,12 @@ window.onload = function() {
 	}
 	setHistory(alias);
 	updateBookmarks(alias);
+	printHistory();
 }
 
+function setStakeholdersFilter(stakeholders) {
+	setCookie('stakeholders', stakeholders);
+}
 
 function setLangRu() {
 	setCookie('lang', 'ru', options);
@@ -26,7 +30,7 @@ function setLangEn() {
 
 function setHistory(alias) {
 	if (getCookie('history') == undefined) {
-		setCookie('history', '{"history":[]}', "{'expires':60000}");
+		setCookie('history', '{"history":[]}');
 	}
 	var temp = getCookie('history');
 	temp = JSON.parse(temp);
@@ -39,6 +43,24 @@ function setHistory(alias) {
 	}));
 }
 
+function printHistory(divid = 'history') {
+	if (document.getElementById(divid)) {
+		var historyText = 'Пусто';
+		var history = getCookie('history');
+		history = JSON.parse(history);
+		history = history.history;
+		if (history) {
+			historyText = '<ul>';
+		}
+		for (var i = 1; i < history.length; i++) {
+			historyText += '<li>' + history[i] + '<li>';
+		}
+		historyText += '</ul>';
+		document.getElementById(divid).innerHTML = historyText;
+	}
+}
+
+
 function setBookmark(alias) {
 	var temp = getCookie('bookmarks');
 	temp = JSON.parse(temp);
@@ -46,7 +68,7 @@ function setBookmark(alias) {
 	temp.push(alias);
 	setCookie('bookmarks', JSON.stringify({
 		"bookmarks": temp
-	}));
+	}), '{"options":{"expires":60000}}');
 	location.reload();
 }
 
@@ -77,8 +99,8 @@ function updateBookmarks(alias) {
 
 function setCookie(name, value, options) {
 	options = options || {};
-	var expires = options.expires;
-
+	var expires = undefined;
+	console.log(options);
 	if (typeof expires == "number" && expires) {
 		var d = new Date();
 		d.setTime(d.getTime() + expires * 1000);
