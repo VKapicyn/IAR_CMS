@@ -629,3 +629,14 @@ tr {
 .current-submenu {
 	color:#2abee9;
 }
+
+.portrait {
+	width: 200px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 5px; 
+}
+
+.signature {
+	text-align: right;
+}
