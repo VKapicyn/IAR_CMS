@@ -640,3 +640,13 @@ tr {
 .signature {
 	text-align: right;
 }
+
+.companies {
+	float: left;
+	width: 300px;
+}
+
+.center-field {
+	text-align: center;
+	width: 270px;
+}
