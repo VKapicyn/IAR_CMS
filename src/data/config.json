@@ -1,49 +1,198 @@
 {
-  "pages":[
-    {
-      "title_ru":"Главная",
-      "title_en":"Main",
-      "alias":"main",
-      "parent": "none",
-      "order":"0",
-      "stakeholders":["local authorities", "scientific society", "investors"],
-      "indexes":[]
-    },
-    {
-      "title_ru":"1.1 Стратегия",
-      "title_en":"1.1 Strategy",
-      "alias":"strategy",
-      "parent": "main",
-      "order":"1",
-      "stakeholders":["local authorities", "investors", "partners"],
-      "indexes":["G4-1", "G4-2", "G4-9"]
-    },
-    {
-      "title_ru":"1.2.Бизнес-модель",
-      "title_en":"1.2 Business model",
-      "alias":"business-model",
-      "parent": "main",
-      "order":"2",
-      "stakeholders":["local authorities", "investors", "partners"],
-      "indexes":["G4-4"]
-    },
-    {
-      "title_ru":"Ошибка 404",
-      "title_en":"Error 404",
-      "alias":"404",
-      "parent": "none",
-      "order":"-1",
-      "stakeholders":[],
-      "indexes":[]
-    },
-    {
-      "title_ru":"Поиск",
-      "title_en":"Searching",
-      "alias":"search",
-      "parent": "none",
-      "order":"-2",
-      "stakeholders":[],
-      "indexes":[]
-    }
-  ]
+    "pages": [{
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "main",
+            "parent": "none",
+            "order": "0"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "about_research",
+            "parent": "none",
+            "order": "1"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "about_the_Reporting_Network",
+            "parent": "none",
+            "order": "2"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "appeal_of_the_head",
+            "parent": "none",
+            "order": "3"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "aspects_of_disclosure_of_information",
+            "parent": "none",
+            "order": "4"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "certification_of_the_accounting_information",
+            "parent": "none",
+            "order": "5"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "corporate_transparency_and_investment_attractiveness",
+            "parent": "none",
+            "order": "6"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "corporate_transparency",
+            "parent": "none",
+            "order": "7"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_business_model_information",
+            "parent": "none",
+            "order": "8"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_information_about_corporative_governance",
+            "parent": "none",
+            "order": "9"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_information_about_the_strategy_and_its_implementation",
+            "parent": "none",
+            "order": "10"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_information_in_the_field_of_sustainable_development",
+            "parent": "none",
+            "order": "11"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_information_in_the_reporting_period",
+            "parent": "none",
+            "order": "12"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_information_of_3level_transparency_companies",
+            "parent": "none",
+            "order": "13"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "disclosure_of_information_on_procurement_activities",
+            "parent": "none",
+            "order": "14"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "ease_of_use",
+            "parent": "none",
+            "order": "15"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "feature_of_disclosure_of_the_reporting",
+            "parent": "none",
+            "order": "16"
+        },
+        {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "following_international_standarts",
+            "parent": "none",
+            "order": "17"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "information_disclosure",
+            "parent": "none",
+            "order": "18"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "key_indicator_of_transparency",
+            "parent": "none",
+            "order": "19"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "main_conclusions",
+            "parent": "none",
+            "order": "20"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "mechanisms_of_transparency_disclosures",
+            "parent": "none",
+            "order": "21"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "members",
+            "parent": "none",
+            "order": "22"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "position_of_the_recearch",
+            "parent": "none",
+            "order": "23"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "sistems_approach",
+            "parent": "none",
+            "order": "24"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "status_of_corporate_transparency",
+            "parent": "none",
+            "order": "25"
+        }, {
+            "title_ru": "Главная",
+            "title_en": "Main",
+            "alias": "transparency_of_companies",
+            "parent": "none",
+            "order": "26"
+        },
+        {
+            "title_ru": "Ошибка 404",
+            "title_en": "Error 404",
+            "alias": "404",
+            "parent": "none",
+            "order": "-1"
+
+        },
+        {
+            "title_ru": "Поиск",
+            "title_en": "Searching",
+            "alias": "search",
+            "parent": "none",
+            "order": "-2"
+        }
+    ]
 }

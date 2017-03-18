@@ -4,9 +4,10 @@ var fs = require('fs');
 exports.page = function(req, res) {
 	try {
 		if ((req.cookies['lang'] == 'ru') || (req.cookies['lang'] == undefined)) {
+			console.log(req.params.alias + '_ru' + '.html');
+			console.log(getTitle(req.params.alias, 'ru'));
 			res.render(req.params.alias + '_ru' + '.html', {
-				title: getTitle(req.params.alias, 'ru'),
-				breadcrumbs: getBreadCrumbs(req.params.alias)
+				title: getTitle(req.params.alias, 'ru')
 			});
 		} else {
 			res.render(req.params.alias + '_en' + '.html', {
