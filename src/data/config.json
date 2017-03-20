@@ -44,7 +44,7 @@
         {
             "title_ru": "Главная",
             "title_en": "Main",
-            "alias": "corporate_transparency_and_investment_attractiveness",
+            "alias": "corporate_transparency_and_investment_attractivness",
             "parent": "none",
             "order": "6"
         },
@@ -65,7 +65,7 @@
         {
             "title_ru": "Главная",
             "title_en": "Main",
-            "alias": "disclosure_of_information_about_corporative_governance",
+            "alias": "disclosure_of_information_about_corporate_governance",
             "parent": "none",
             "order": "9"
         },
@@ -157,7 +157,7 @@
         }, {
             "title_ru": "Главная",
             "title_en": "Main",
-            "alias": "position_of_the_recearch",
+            "alias": "position_of_the_research",
             "parent": "none",
             "order": "23"
         }, {
