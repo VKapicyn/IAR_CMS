@@ -75,7 +75,7 @@ header {
 
 .logo {
 	width: 210px;
-	height: 120px;	
+	height: 120px;
 }
 
 .site-name {
@@ -511,13 +511,13 @@ menu ul {
 	border-spacing: 0;
 	font-size: 	18px;
 	border-spacing: 2px 2px;
-	padding: 10px 0px 10px 0px; 	
+	padding: 10px 0px 10px 0px;
 }
 
 .table-header {
 	background: #2abee9;
 	color: #fff;
-	text-align: 	center;		
+	text-align: 	center;
 }
 
 tr {
@@ -529,8 +529,8 @@ tr {
 	border-bottom: 	1px solid #000;
 }
 
-.current {     
-	background: #3a499f; 
+.current {
+	background: #3a499f;
 	margin-bottom: 10px;
 }
 
@@ -587,16 +587,16 @@ tr {
 }
 
 #container1 {
-	min-width: 310px; 
-	max-width: 800px; 
-	height: 400px; 
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
 	margin: 0 auto
 }
 
 #container2 {
-	min-width: 310px; 
-	max-width: 800px; 
-	height: 400px; 
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
 	margin: 0 auto
 }
 
